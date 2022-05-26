@@ -1,5 +1,3 @@
-from turtle import color
-from pyparsing import alphas
 import streamlit as st
 import pandas as pd
 import seaborn as sns
