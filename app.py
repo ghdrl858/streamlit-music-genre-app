@@ -13,7 +13,8 @@ def main() :
     if choice == menu[0] :
         run_home()
     elif choice == menu[1] :
-        run_eda()
+        # run_eda()
+        pass
     elif choice == menu[2] :
         run_ml()
 
