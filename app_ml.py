@@ -21,47 +21,47 @@ def run_ml():
     music = music.drop(["index", "instance_id", "track_name", "obtained_date"], axis = 1)
 
     # 해당 NaN값 제거
-    # music.drop([10000, 10001, 10002, 10003, 10004], inplace = True)
+    music.drop([10000, 10001, 10002, 10003, 10004], inplace = True)
 
     # # artist_name에 empty_field에 비중이 높아 제거
-    # music = music.drop(music[music["artist_name"] == "empty_field"].index)
+    music = music.drop(music[music["artist_name"] == "empty_field"].index)
 
     # # 아티스트 확인 후 제거
-    # music.drop("artist_name", axis = 1, inplace = True)
+    music.drop("artist_name", axis = 1, inplace = True)
 
     # # ? 값을 할당하면 정확한 수치 비교가 불가하므로, ? 값이 할당된 모든행을 제거
-    # music = music.drop(music[music["tempo"] == "?"].index)
+    music = music.drop(music[music["tempo"] == "?"].index)
 
     # # tempo의 값을 float으로 type 변환
-    # music["tempo"] = music["tempo"].astype("float")
+    music["tempo"] = music["tempo"].astype("float")
 
     # # 소수점을 반올림해서 정리한다. decimals가 2이므로 소수점 둘째자리에서 반올림한다.
-    # music["tempo"] = np.around(music["tempo"], decimals = 2)
+    music["tempo"] = np.around(music["tempo"], decimals = 2)
 
     # # key와 mode는 문자열로 되어있기 때문에 인코딩을 해야 한다.(LabelEncoder)
-    # music["key"] = key_encoder.transform(music['key'])
-    # music["mode"] = mode_encoder.transform(music["mode"])
+    music["key"] = key_encoder.transform(music['key'])
+    music["mode"] = mode_encoder.transform(music["mode"])
 
     # # scaler 피처 스케일링 해준다.
-    # X_ge = music.drop("music_genre", axis = 1)
-    # X = scaler.transform(X_ge)
+    X_ge = music.drop("music_genre", axis = 1)
+    X = scaler.transform(X_ge)
 
     # # y 기능
-    # y = music["music_genre"]
+    y = music["music_genre"]
 
     # # 가중 산술 평균 이용하기
-    # f1 = make_scorer(f1_score, average = "weighted")
+    f1 = make_scorer(f1_score, average = "weighted")
 
     # # 정확도와 테스트 정확도 함수 정의
-    # def classification_task(estimator, features, labels):
+    def classification_task(estimator, features, labels):
   
-    #     predictions = estimator.predict(features)
+        predictions = estimator.predict(features)
         
-    #     st.write(f"Accuracy: {accuracy_score(labels, predictions)}")
-    #     st.write(f"F1 Score: {f1_score(labels, predictions, average = 'weighted')}")
+        st.write(f"Accuracy: {accuracy_score(labels, predictions)}")
+        st.write(f"F1 Score: {f1_score(labels, predictions, average = 'weighted')}")
     
-    # st.dataframe(music)
-    # st.write('ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ')
+    st.dataframe(music)
+    st.write('ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ')
 
     # # 정확도와 테스트 정확도
     # st.write('''##### Accuracy : 정확도 \n ##### F1 Score : 테스트 정확도''')
