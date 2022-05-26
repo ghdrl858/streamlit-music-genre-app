@@ -75,14 +75,14 @@ def run_ml():
     # # 행 : 실제 클래스, 열 : 예측 클래스
     # # ex) Alternative 곡을 수직열으로 해석하면, 사실 131곡 중에 Anime가 9곡 Blues가 17곡이라고 예측
     # # 하지만, 수평행 즉, 실제 클래스로 해석하자면 131곡 중에 Anime가 2곡이었고, Blues가 7곡이었다.
-    # fig = plt.figure()
-    # sns.heatmap(confusion_matrix(y, model.predict(X)),
-    #     annot = True,
-    #     fmt = ".0f",
-    #     cmap = "vlag",
-    #     linewidths = 2,
-    #     linecolor = "red",
-    #     xticklabels = model.classes_,
-    #     yticklabels = model.classes_)
-    # st.write('''### Actual values''')
-    # st.pyplot(fig)
+    fig = plt.figure()
+    sns.heatmap(confusion_matrix(y, model.predict(X)),
+        annot = True,
+        fmt = ".0f",
+        cmap = "vlag",
+        linewidths = 2,
+        linecolor = "red",
+        xticklabels = model.classes_,
+        yticklabels = model.classes_)
+    st.write('''### Actual values''')
+    st.pyplot(fig)
