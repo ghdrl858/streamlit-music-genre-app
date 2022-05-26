@@ -40,12 +40,12 @@ def run_ml():
     music["tempo"] = np.around(music["tempo"], decimals = 2)
 
     # key와 mode는 문자열로 되어있기 때문에 인코딩을 해야 한다.(LabelEncoder)
-    music["key"] = key_encoder.fit_transform(music['key'])
-    music["mode"] = mode_encoder.fit_transform(music["mode"])
+    music["key"] = key_encoder.transform(music['key'])
+    music["mode"] = mode_encoder.transform(music["mode"])
 
     # scaler 피처 스케일링 해준다.
     X_ge = music.drop("music_genre", axis = 1)
-    X = scaler.fit_transform(X_ge)
+    X = scaler.transform(X_ge)
 
     # y 기능
     y = music["music_genre"]
