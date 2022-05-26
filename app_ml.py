@@ -8,7 +8,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import make_scorer, f1_score, accuracy_score, confusion_matrix, classification_report
-import scikitplot as skplt
 
 def run_ml():
     st.write('''##### 인공지능학습을 통해서 실제와 예측값을 히트맵을 통해 비교합니다.''')
