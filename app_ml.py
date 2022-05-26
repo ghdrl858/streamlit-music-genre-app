@@ -61,16 +61,16 @@ def run_ml():
         st.write(f"F1 Score: {f1_score(labels, predictions, average = 'weighted')}")
     
     st.dataframe(music)
-    st.write('ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ')
+    st.write("""***""")
 
     # # 정확도와 테스트 정확도
     st.write('''##### Accuracy : 정확도 \n ##### F1 Score : 테스트 정확도''')
     classification_task(model, X, y)
 
-    st.write('ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ')
+    st.write("""***""")
     st.write('''º 해당 테이블은 모든 클레스에 정밀, 호출 및 fi 점수를 표시해줍니다.''')
     st.text(classification_report(y, model.predict(X)))
-    st.write('ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ')
+    st.write("""***""")
 
     # # 행 : 실제 클래스, 열 : 예측 클래스
     # # ex) Alternative 곡을 수직열으로 해석하면, 사실 131곡 중에 Anime가 9곡 Blues가 17곡이라고 예측

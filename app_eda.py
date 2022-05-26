@@ -18,6 +18,7 @@ def run_eda() :
     
     if len(column_list) != 0 :
         st.dataframe(music[column_list])
+    st.write("""***""")
 
     # 빈필드 아티스트 제거 후 20명에 아티스트 선정
     top_20_artists = music["artist_name"].value_counts()[:20].sort_values(ascending = True)
@@ -34,6 +35,7 @@ def run_eda() :
     plt.xlabel("Number of songs per artist")
     plt.title("Songs per artist")
     st.pyplot(music1)
+    st.write("""***""")
 
     # 주요 컬럼들 그래프
     st.write('')
@@ -44,6 +46,7 @@ def run_eda() :
     sns.countplot(x = 'key', data = music, palette = "ocean", order = None)
     plt.title(f"Counts in each {'key'}")
     st.pyplot(key_)
+    st.write("""***""")
 
     # mode 컬럼 그래프
     st.write('''##### - ***mode***와 관련된 그래프입니다.''')
@@ -52,6 +55,7 @@ def run_eda() :
     sns.countplot(x = 'mode', data = music, palette = "ocean", order = None)
     plt.title(f"Counts in each {'mode'}")
     st.pyplot(mode_)
+    st.write("""***""")
 
     # music_genre 컬럼 그래프
     st.write('''##### - ***music_genre***와 관련된 그래프입니다.''')
