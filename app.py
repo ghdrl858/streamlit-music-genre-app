@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from app_home import run_home
-from app_eda import run_eda
+# from app_eda import run_eda
 from app_ml import run_ml
 
 def main() :
