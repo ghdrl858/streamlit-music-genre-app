@@ -5,7 +5,7 @@ from app_eda import run_eda
 from app_ml import run_ml
 
 def main() :
-    st.header('Music-Genre, 실제와 예측 차이 알아보기')
+    st.header('Music-Genre')
 
     menu = ['Home', 'EDA', 'ML']
     choice = st.sidebar.selectbox('메뉴', menu)
