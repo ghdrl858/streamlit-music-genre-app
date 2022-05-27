@@ -15,7 +15,7 @@ def main() :
         "container": {"padding": "5!important", "background-color": "black", },
         "icon": {"color": "white", "font-size": "25px"}, 
         "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#aeacb0"},
-        "nav-link-selected": {"background-color": "#198fc2"},
+        "nav-link-selected": {"background-color": "#9ba6fa"},
     })
     if menu == 'Home':
         run_home()
