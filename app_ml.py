@@ -4,12 +4,11 @@ import joblib
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import make_scorer, f1_score, accuracy_score, confusion_matrix, classification_report
 
 def run_ml():
+    st.header('Music-Genre, ML')
+
     st.write('''##### 인공지능학습을 통해서 실제와 예측값을 히트맵을 통해 비교합니다.''')
     key_encoder = joblib.load('data/key_encoder.pkl')
     scaler = joblib.load('data/scaler.pkl')
@@ -49,9 +48,6 @@ def run_ml():
     # # y 기능
     y = music["music_genre"]
 
-    # # 가중 산술 평균 이용하기
-    f1 = make_scorer(f1_score, average = "weighted")
-
     # # 정확도와 테스트 정확도 함수 정의
     def classification_task(estimator, features, labels):
   
@@ -64,7 +60,7 @@ def run_ml():
     st.write("""***""")
 
     # # 정확도와 테스트 정확도
-    st.write('''##### Accuracy : 정확도 \n ##### F1 Score : 테스트 정확도''')
+    st.write('''##### Accuracy는 정확도를 의미, F1 Score는 정밀도와 재현율의 조화 평균을 의미한다.''')
     classification_task(model, X, y)
 
     st.write("""***""")
@@ -85,4 +81,6 @@ def run_ml():
         xticklabels = model.classes_,
         yticklabels = model.classes_)
     st.write('''### Actual values''')
+    st.text('''º 실제값과 예측값을 비교하는 Heatmap입니다.
+º 수평으로 보면 실제값들의 분포, 수직으로 보면 인공지능이 학습한 예측값을 뜻합니다.''')
     st.pyplot(fig)

@@ -2,13 +2,16 @@ import streamlit as st
 import pandas as pd
 
 def run_home() :
-    st.write('''### Music-Genre 소개
-    
-###### 내용정리 잘해서 Home화면 구성해볼께요 ~
+    st.header('Music-Genre')
+    # col1, col2, col3= st.columns(3)
+
+    # with col1 :
+    #     st.image("image/black_piano.jpg", width = 850)
+
+    st.write('''#### º 
 
     ''')
+    video_file = open('video/Guitarist - 139.mp4', 'rb')
+    video_bytes = video_file.read()
 
-    col1, col2, col3= st.columns(3)
-
-    with col1 :
-        st.image("image/black_elec.jpg", width = 700)
+    st.video(video_bytes)

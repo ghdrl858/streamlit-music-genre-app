@@ -4,6 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def run_eda() :
+    st.header('Music-Genre, EDA')
+
     # 필요없는 컬럼 정리
     music = pd.read_csv('data/music_genre.csv')
     music.reset_index(inplace = True)
@@ -27,7 +29,7 @@ def run_eda() :
     st.write('')
     st.write('')
     st.write('''##### - 많은 ***Artists***중에 정렬해서 20명에 인원만 그래프로 표현했습니다.''')
-    st.text('''º 가장 우세한 아티스트는 우에마쓰 노부오로 일본 작곡가이며, 
+    st.text('''º 가장 우세한 아티스트는 우에마쓰 노부오로 일본 게임 작곡가이며, 
 º 다음은 모두가 아는 모차르트, 베토벤 순으로 정렬했습니다.
     ''')
     music1 = plt.figure()
