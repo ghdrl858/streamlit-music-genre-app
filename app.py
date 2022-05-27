@@ -24,6 +24,7 @@ def main() :
     elif menu == 'ML':
         run_ml()
    
+    # 이미지 구현
     with st.sidebar :
         st.write('')
         st.write('')
