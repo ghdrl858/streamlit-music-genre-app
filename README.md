@@ -7,6 +7,7 @@
  ✔️ 데이터 작업은 'Google Colab' 으로 작업했고, 'Streamlit' 사용으로 웹 대시보드를 만들어 시각화하기 위해 'Visual Studio Code' 로 작업한 데이터를 옮기면서 'Streamlit' 에 문법에 맞게 만드는 작업을 했습니다.
 
  ✔️ 'music_genre.csv' 파일과 데이터 작업 도움은 아래 출처에서 도움을 받았습니다.
+ 
  ➡️ 출처 : https://www.kaggle.com/datasets/vicsuperman/prediction-of-music-genre
 
 # 🎼 주요 컬럼 정리
