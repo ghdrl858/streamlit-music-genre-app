@@ -1,4 +1,4 @@
-# 🎷🎶 streamlit-music-genre-app
+# 🎶 streamlit-music-genre-app
 
  ✔️ 주제 선정에서 음악 관련 데이터를 생각하다가 찾아보니 음악 관련 데이터가 있어서 주제를 선정했습니다.
 
