@@ -86,7 +86,7 @@ pip install matplotlib
 
 ![app_Mml2](https://user-images.githubusercontent.com/105832443/172646894-ae6db384-236a-4231-afa1-458e82537bc2.png)
 
-💻 작업진행률  
+# 💻 작업진행률  
 ✔️ 1일차 : 'music_genre.csv' 파일을 받아 데이터를 정리하는 작업을 'Google Colab' 을 통해 간단한 info 확인 및 통계, 각 컬럼의 값을 통한 그래프 작업을 진행했습니다.
 
 ✔️ 2일차 : 인공지능학습을 위해 모델링 선정 및 예측값 추출, 실제값 / 예측값을 이용한 heatmap 그래프를 작업했습니다.
